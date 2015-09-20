@@ -1,92 +1,92 @@
 <!DOCTYPE html> 
 <html class="no-js">  
 <head>
-	
-<style type="text/css" media="screen">
-.sortorder:after {
-    content: '\25b2';
-  }
-  .sortorder.reverse:after {
-    content: '\25bc';
-  }
-	label, a{
-font: 10px;
-font-family: calibri;
-width:100px;
-display:inline-block;
-	}
-li a {
-	font-weight:bolder;
-	text-decoration: none;
-}
+	<style type="text/css" media="screen">
+		.sortorder:after {
+			content: '\25b2';
+		}
+		.sortorder.reverse:after {
+			content: '\25bc';
+		}
+		label, a{
+			font: 10px;
+			font-family: calibri;
+			width:100px;
+			display:inline-block;
+		}
+		li a {
+			font-weight:bolder;
+			text-decoration: none;
+		}
 
-	li a:first-child, li label:first-child{
-		padding-left:4px;
-	}
-	li a{
-		padding-bottom: 5px;
-	}
-	li a, li label{
-		padding-left: 5px;
-		border-left:1px green double;
-	}
-	li{
-width:700px;
-		border:1px green solid;
-	}
-	li:nth-of-type(2n){
-		background-color:lightsteelblue;
-	}
-</style>
+		li a:first-child, li label:first-child{
+			padding-left:4px;
+		}
+		li a{
+			padding-bottom: 5px;
+		}
+		li a, li label{
+			padding-left: 5px;
+			border-left:1px green double;
+		}
+		li{
+			width:700px;
+			border:1px green solid;
+		}
+		li:nth-of-type(2n){
+			background-color:lightsteelblue;
+		}
+	</style>
 
 </head>
 <body ng-app="appModule">
 
-<span class="highlight"><!-- Our Website Content Goes Here --></span>
-<div ng-controller="appCtrl"> 
-<i>Sort By: <span ng-bind="sortCriteria"></span></i>
+	<span class="highlight"><!-- Our Website Content Goes Here --></span>
+	<div ng-controller="appCtrl"> 
+		<i>Sort By: <span ng-bind="sortCriteria"></span></i>
 		<i>Sort Reverse: <span ng-bind="sortReverse"></span></i>
-<div>Search.......<input ng-model="filterBy"></input></div>
+		<div>Search.......<input ng-model="filterBy"></input></div>
 		<ul>
 
-	<li style="list-style-type:square;">
+			<li style="list-style-type:square;">
 
-	<a href="#" 
-	ng-click="sortCriteria='Driver.givenName'; sortReverse=!sortReverse" 
-	class="sortOrder" 
-	ng-class="{'reverse': sortReverse}">Given Name</a>
-    <a href="#" ng-click="sortCriteria='number'; sortReverse=!sortReverse"
-    class="sortOrder" 
-	ng-class="{'reverse': sortReverse}">Number</a>
-    <a href="#" ng-click="sortCriteria='position'; sortReverse=!sortReverse"
-    class="sortOrder" 
-	ng-class="{'reverse': sortReverse}">Position</a>
-	<a href="#" ng-click="sortCriteria='Driver.nationality'; sortReverse=!sortReverse"
-	class="sortOrder" 
-	ng-class="{'reverse': sortReverse}">Nationality</a>
-	<a href="#" ng-click="sortCriteria='Constructor.name'; sortReverse=!sortReverse"
-	class="sortOrder" 
-	ng-class="{'reverse': sortReverse}">Car</a>
-	<a href="#" ng-click="sortCriteria='FastestLap.AverageSpeed.speed'; sortReverse=!sortReverse"
-	class="sortOrder" 
-	ng-class="{'reverse': sortReverse}">Avg Speed</a>
-	</li>
-	<li style="height:200px;background-color:black;color:cyan;font:20px;text-align:center" ng-hide="raceResults.length">Loading..........</li>
-		<li style="list-style-type:circle;" ng-repeat="user in raceResults | orderBy:sortCriteria:sortReverse | filter:filterBy">
+				<a href="#" 
+				ng-click="sortCriteria='Driver.givenName'; sortReverse=!sortReverse" 
+				class="sortOrder" 
+				ng-class="{'reverse': sortReverse}">Given Name</a>
+				<a href="#" ng-click="sortCriteria='number'; sortReverse=!sortReverse"
+				class="sortOrder" 
+				ng-class="{'reverse': sortReverse}">Number</a>
+				<a href="#" ng-click="sortCriteria='position'; sortReverse=!sortReverse"
+				class="sortOrder" 
+				ng-class="{'reverse': sortReverse}">Position</a>
+				<a href="#" ng-click="sortCriteria='Driver.nationality'; sortReverse=!sortReverse"
+				class="sortOrder" 
+				ng-class="{'reverse': sortReverse}">Nationality</a>
+				<a href="#" ng-click="sortCriteria='Constructor.name'; sortReverse=!sortReverse"
+				class="sortOrder" 
+				ng-class="{'reverse': sortReverse}">Car</a>
+				<a href="#" ng-click="sortCriteria='FastestLap.AverageSpeed.speed'; sortReverse=!sortReverse"
+				class="sortOrder" 
+				ng-class="{'reverse': sortReverse}">Avg Speed</a>
+			</li>
+			<li style="height:200px;background-color:black;color:cyan;font:20px;text-align:center" ng-hide="raceResults.length">Loading..........</li>
+			<li style="list-style-type:circle;" ng-repeat="user in raceResults | orderBy:sortCriteria:sortReverse | filter:filterBy">
 
-			 <label ng-bind="user.Driver.givenName"></label>			 
-			 <label ng-bind="user.number"></label>
-			 <label ng-bind="user.position"></label>
-			 <label ng-bind="user.Driver.nationality"></label>
-			  <label ng-bind="user.Constructor.name"></label>
-			   <label ng-bind="user.FastestLap.AverageSpeed.speed"></label>
-		</li>
-	</ul>
-</div> 
-<script src="../../../Other-Docs/JScript/Angular/angular-1.4.5/angular-all-1.4.5/angular.js"></script>
-<script src="../../../Other-Docs/JScript/Angular/angular-1.4.5/angular-all-1.4.5/angular-route.js"></script>
-<script src="./commonCode/common.js"></script>
-<script src="./controllersDir/main-ctrl.js"></script>
-<script src="./modelDir/main-model.js"></script> 
+				<label ng-bind="user.Driver.givenName"></label>			 
+				<label ng-bind="user.number"></label>
+				<label ng-bind="user.position"></label>
+				<label ng-bind="user.Driver.nationality"></label>
+				<label ng-bind="user.Constructor.name"></label>
+				<label ng-bind="user.FastestLap.AverageSpeed.speed"></label>
+			</li>
+		</ul>
+	</div> 
+	
+	<script src="../../../Other-Docs/JScript/Angular/angular-1.4.5/angular-all-1.4.5/angular.js"></script>
+	<script src="../../../Other-Docs/JScript/Angular/angular-1.4.5/angular-all-1.4.5/angular-route.js"></script>
+	<script src="./commonCode/common.js"></script>
+	<script src="./controllersDir/main-ctrl.js"></script>
+	<script src="./modelDir/main-model.js"></script> 
 </body>
 </html>
