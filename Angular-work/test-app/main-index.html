@@ -8,9 +8,14 @@
 		.sortorder.reverse:after {
 			content: '\25bc';
 		}
-		label, a{
-			font: 10px;
+		
+		body {
+
+			font: 15px consolas;
 			font-family: calibri;
+
+		}
+		label, a{
 			width:100px;
 			display:inline-block;
 		}
@@ -34,7 +39,10 @@
 			border:1px green solid;
 		}
 		li:nth-of-type(2n){
-			background-color:lightsteelblue;
+			background-color:teal;
+		}
+		li:nth-of-type(2n+1){
+			background-color:lightgrey;
 		}
 	</style>
 
@@ -83,8 +91,8 @@
 		</ul>
 	</div> 
 	
-	<script src="../../../Other-Docs/JScript/Angular/angular-1.4.5/angular-all-1.4.5/angular.js"></script>
-	<script src="../../../Other-Docs/JScript/Angular/angular-1.4.5/angular-all-1.4.5/angular-route.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
 	<script src="./commonCode/common.js"></script>
 	<script src="./controllersDir/main-ctrl.js"></script>
 	<script src="./modelDir/main-model.js"></script> 
