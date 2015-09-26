@@ -1,0 +1,72 @@
+	.sortorder:before {
+		content: '\25b2';
+	}
+	.sortorder.reverse:before {
+		content: '\25bc';
+	}
+
+	body {
+
+		font: 15px consolas;
+		font-family: calibri;
+
+	}
+	label, a{
+		width:100px;
+		display:inline-block;
+	}
+	li a {
+		font-weight:bolder;
+		text-decoration: none;
+	}
+
+	li a{
+		padding-bottom: 5px;
+		color: limegreen;												
+	}
+	li a, li label{
+		padding-left: 7px;
+		border-left:1px brown	solid;
+	}
+	li label{
+		color: yellow		;
+		padding-top: 2px;
+		padding-bottom: 2px;
+	}
+	li{
+		width:700px;
+		border:1px brown solid;
+	}
+	li:nth-of-type(2n){
+		background-color: #00011a;
+	}
+	li:nth-of-type(2n+1){
+		background-color: #00011a;
+	}
+	.highlighter{
+		font-weight:bold;
+		font-family: consolas;
+		background-color: pink;
+		font-style: italic;
+		color: navy; 
+		font: 15px;
+		padding: 2px 1px;
+	}
+	.not-displaying{
+		display:none;
+	}
+	input.search-input, input[ng-model="filterBy"]{
+		-webkit-box-shadow:0 0 10px cyan;
+		-moz-box-shadow:0 0 10px cyan;
+		box-shadow:0 0 10px cyan;
+		border-radius: 3px;
+		height:30px;
+		font-size: 17px;
+		font-weight:bolder;
+	}
+	ul{
+		-webkit-box-shadow:0 0 10px cyan;
+		-moz-box-shadow:0 0 10px cyan;
+		box-shadow:0 0 10px cyan;
+	}
+	
