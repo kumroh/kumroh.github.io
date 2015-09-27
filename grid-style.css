@@ -29,7 +29,7 @@
 		border-left:1px brown	solid;
 	}
 	li label{
-		color: yellow		;
+		color: rgba(235, 239, 134, 0.8);
 		padding-top: 2px;
 		padding-bottom: 2px;
 	}
@@ -41,16 +41,19 @@
 		background-color: #00011a;
 	}
 	li:nth-of-type(2n+1){
-		background-color: #00011a;
+		background-color: #00011f;
 	}
 	.highlighter{
 		font-weight:bold;
-		font-family: consolas;
-		background-color: pink;
+		font-family: verdana;
+		-webkit-box-shadow:0 0 15px cyan;
+		-moz-box-shadow:0 0 15px cyan;
+		box-shadow:0 0 15px cyan			;
 		font-style: italic;
-		color: navy; 
-		font: 15px;
-		padding: 2px 1px;
+		color: lightgrey; 
+		font-size: large;  
+		border-radius: 3px; 
+		background-color: maroon;
 	}
 	.not-displaying{
 		display:none;
@@ -63,6 +66,7 @@
 		height:30px;
 		font-size: 17px;
 		font-weight:bolder;
+		text-align: center;
 	}
 	ul{
 		-webkit-box-shadow:0 0 10px cyan;

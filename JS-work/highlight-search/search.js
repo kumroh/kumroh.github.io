@@ -3,7 +3,7 @@
 
     function resetHtml($allRows) {
 
-        var resetReg = new RegExp("(<span.*highlighter.*>)(.*\\w+.*)(<\\/span>)", "gi");
+        var resetReg = new RegExp("(<em.*highlighter.*>)(.*\\w+.*)(<\\/em>)", "gi");
         var labelHtml;
         $allRows.each(function(i, v) {
             labelHtml = v.innerHTML;
@@ -31,14 +31,14 @@
         console.info(value);
     }
 
-    function getReleventResults(searchText, $allRows) {
-        var searchReg = new RegExp("(<label{1}.*>)(.*?" + searchText + ".*?)(<\\/label>{1})", "gi");
+    function getReleventResults(searchText, $allRows) { 
+        var searchReg = new RegExp("(<label{1}.*>.*?)(" + searchText + ")(.*?<\\/label>{1})", "gi");
         var labelHtml;
 
         $allRows.each(function(i, v) {
             labelHtml = v.innerHTML;
             if (searchReg.test(labelHtml)) {
-                v.innerHTML = labelHtml.replace(searchReg, "$1<span class='highlighter'>$2</span>$3");
+                v.innerHTML = labelHtml.replace(searchReg, "$1<em class='highlighter'>$2</em>$3");
 
             } else {
                 $(v).addClass('not-displaying');
