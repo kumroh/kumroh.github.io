@@ -37,23 +37,22 @@
 		width:700px;
 		border:1px brown solid;
 	}
-	li:nth-of-type(2n){
-		background-color: #00011a;
+		li:nth-of-type(1){
+	background-color:black;
 	}
-	li:nth-of-type(2n+1){
-		background-color: #00011f;
+ 		li{
+	background-color:maroon;
 	}
 	.highlighter{
 		font-weight:bold;
 		font-family: verdana;
-		-webkit-box-shadow:0 0 15px cyan;
-		-moz-box-shadow:0 0 15px cyan;
-		box-shadow:0 0 15px cyan			;
-		font-style: italic;
-		color: lightgrey; 
-		font-size: large;  
+		-webkit-box-shadow:0 0 12px cyan;
+		-moz-box-shadow:0 0 12px cyan;
+		box-shadow:0 0 12px cyan;	 
+		color: limegreen; 
+		font-size: 13px;  
 		border-radius: 3px; 
-		background-color: maroon;
+		background-color: white;
 	}
 	.not-displaying{
 		display:none;

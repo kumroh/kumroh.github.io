@@ -18,7 +18,7 @@
 
     function setUpSearch(e) {
         var value = $(e.target).val();
-        var $allRows = $('li[style="list-style-type:circle;"]');
+        var $allRows = $('li:not(:first-child');
 
         resetHtml($allRows);
 
