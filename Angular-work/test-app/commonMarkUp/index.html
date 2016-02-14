@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="myAppModule">
+    <head> <title>
+        Test App....
+    </title>    </head>
+    <body >
+        <div ng-controller="appCtrl">
+        HEre..<label ng-bind="myData"></label>
+       <p>Print States..</p>
+        <select     ng-model="selectedValue" ng-options="state as state.name for state in states() track by state.id">
+            
+        </select>   
+        <i>{{selectedValue}}</i>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+        <script src="./../ctrlDir/app-ctrl.js"></script>
+    </body>
+</html>
