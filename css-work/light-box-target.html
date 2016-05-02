@@ -4,6 +4,27 @@
 <meta charset="UTF-8" />
 <title>  CSS Lightbox</title>
 <link rel="stylesheet" type="text/css" href="the-style.css">
+<script>
+  (function(){
+    var win = window;
+    window.onbeforeunload = function(e){
+                     //alert("J"); 
+                     console.log('win before unload'); 
+                     return "";
+                   };
+
+                   window.onblur = function(e){ 
+                     console.log('win before unload'); 
+                     
+                           setTimeout(function(){
+                            win.focus();
+                           }, 50);
+                     return false;
+                   }; 
+
+  })();
+</script>
+
 </head>
 
 <body>

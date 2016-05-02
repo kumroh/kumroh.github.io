@@ -12,4 +12,4 @@ var progInterval = window.setInterval(function() {
     }
     progFill.style.width = (progWidth + 2) + 'px';
     progPerc.innerHTML = (parseFloat((progWidth + 2) / winWidth) * 100).toFixed(3).toString() + ' %';
-}, 25);
+}, 45);
