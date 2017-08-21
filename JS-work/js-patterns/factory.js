@@ -11,7 +11,7 @@ function CarSeat(options) {
     this.material = options.material || 'leather';
     this.slider = options.slider || false;
 
-    console.log('Car seat created.....');
+    console.log('Car seat created');
 }
 
 function CarPartFactory() {}
