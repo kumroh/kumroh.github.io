@@ -21,7 +21,6 @@
         { name: 'Ranveer', status: 'unknown' }
     ];
 
-
     draw(data);
 
 })();
